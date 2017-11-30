@@ -75,3 +75,88 @@ ccc = City._make(tokyo)
 print(ccc)
 for key, value in ccc._asdict().items():
     print(key + ':', value)
+
+## 作为不可变列表的元组  -- 第57页
+
+# 切片
+## 切片和区间会忽略最后一个元素
+## 对对象进行切片
+s = 'bicycle'
+print(s[::3])
+print(s[::-1])
+## 多维切片和省略
+## 给切片赋值
+l = list(range(10))
+l[2:5] = [20, 30]
+del l[5:7]
+l[3::2] = [11, 22]
+print(l)
+# 对序列使用+和* => 产生新序列, 不修改原有的序列
+print(l+l)
+print(l*3)
+## 建立由列表组成的列表 => 二维???
+board = [['_'] * 3 for i in range(3)]
+print(board)
+board[1][2] = 'X'
+print(board[1][2])
+print(board)
+
+# 序列的增量赋值 += => __iadd__     *= => __imul__
+ll = [1, 2, 3]
+ill = id(ll)
+print(ill)
+ll *= 2  # 可变序列不创建新变量
+print(ll)
+print(id(ll))
+
+tt = (1, 2, 3)
+itt = id(tt)
+print(itt)
+tt *= 2 # 不可变序列创建新变量
+print(tt)
+print(id(tt))
+
+## 不要把可变对象放在元组
+## 增量赋值不是一个原子操作
+# it = (1, 2, [30, 40])
+# it[2] += [50, 60]
+# print(it)
+
+# list.sort 方法和内置函数 sorted
+print(l.sort())  # 返回值是 none
+print(sorted(l)) # 有返回值,可以接受任何形式的可迭代对象做参数
+
+# 用 bisect 来管理已排序的序列  bisect模块包含 bisect和 insort 两个主要函数,都是利用二分查找算法在有序序列中查找或插入元素
+## 用 bisect 来搜索
+
+# import bisect
+# import sys
+#
+# HAYSTACK = [1, 4, 5, 6, 8, 12, 15, 20, 21, 23, 23, 26, 29, 30]
+# NEEDLES = [0, 1, 2, 5, 8, 10, 22, 23, 29, 30, 31]
+# Row_Fmt = '{0:2d} @ {1:2d}  {2}{0:<2d}'
+# def demo(bisect_fn):
+#     for needle in reversed(NEEDLES):
+#         position = bisect_fn(HAYSTACK, needle)
+#         offset = position * ' |'
+#         print(Row_Fmt.format(needle, position, offset))
+# if __name__ == '__main__':
+#     if sys.argv[-1] == 'left':
+#         bisect_fn = bisect.bisect_left
+#     else:
+#         bisect_fn = bisect.bisect
+#     print('DEMO:', bisect_fn.__name__)
+#     print('haystack ->', ' '.join('%2d' % n for n in HAYSTACK))
+#     demo(bisect_fn)
+
+## bisect.insort
+# import  bisect
+# import  random
+# 
+# SIZE = 7
+# random.seed(1729)
+# my_list = []
+# for i in range(SIZE):
+#     new_item = random.randrange(SIZE*2)
+#     bisect.insort(my_list, new_item)
+#     print('%2d ->' % new_item, my_list)
