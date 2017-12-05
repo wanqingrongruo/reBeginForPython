@@ -191,3 +191,40 @@ numbers = array('h', [-2, -1, 0, 1, 2])
 memv = memoryview(numbers)
 print(len(memv))
 print(memv[0])
+memv_dec = memv.cast('B')
+print(memv_dec.tolist())
+
+## NumPy 和 SciPy
+import numpy
+numa = numpy.arange(12)
+print(numa)
+print(type(numa))
+print(numa.shape)
+numa.shape = 3, 4
+print(numa)
+print(numa[2])
+print(numa[2][1])
+print(numa[:,1])
+print(numa[1,:])
+print(numa.transpose())
+
+from time import perf_counter as pc  # 导入精度和性能都比较高德计时器
+
+t0 = pc()
+floats *= 3
+interval = pc() - t0
+print(interval)
+
+from  collections import deque  # 双向队列
+dq = deque(range(10), maxlen=10)
+print(dq)
+dq.rotate(3)
+print(dq)
+dq.rotate(-4)
+print(dq)
+dq.appendleft(-1)
+print(dq)
+dq.extend([11, 22, 33])
+print(dq)
+dq.extendleft([10, 20, 30 ,40])
+print(dq)
