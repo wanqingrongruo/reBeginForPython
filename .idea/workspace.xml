@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="2fb9d81a-f9a6-4feb-85f6-5b5e8b605be6" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/floats.bin" afterPath="$PROJECT_DIR$/floats.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DS3.0.py" afterPath="$PROJECT_DIR$/DS3.0.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -29,7 +27,7 @@
       <file leaf-file-name="DS3.0.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DS3.0.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="439">
+            <state relative-caret-position="489">
               <caret line="57" column="0" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
               <folding />
             </state>
@@ -440,7 +438,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/DS3.0.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="439">
+        <state relative-caret-position="489">
           <caret line="57" column="0" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
           <folding />
         </state>
